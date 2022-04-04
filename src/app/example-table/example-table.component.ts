@@ -31,7 +31,7 @@ const persons = [
 @Component({
   selector: 'app-example-table',
   templateUrl: './example-table.component.html',
-  styleUrls: ['./example-table.component.css'],
+  styleUrls: ['./example-table.component.scss'],
 })
 export class ExampleTableComponent implements OnInit, AfterViewInit {
   exTable: any;

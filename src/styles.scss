@@ -1,0 +1,29 @@
+/* Add application styles & imports to this file! */
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes
+// available in palette.scss (imported above). 
+// For each palette, you can optionally specify a default, lighter, and darker hue.
+$app-primary: mat.define-palette(mat.$blue-gray-palette);
+$app-accent: mat.define-palette(mat.$red-palette, 400, 600, 900);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat.define-palette(mat.$deep-orange-palette);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-dark-theme: mat.define-dark-theme(
+    (
+        color: (
+            primary: $app-primary,
+            accent: $app-accent,
+            warn: $app-warn,
+        ),
+    )
+);
+// Apply the theme to the components in use
+@include mat.button-theme($app-dark-theme);
+@include mat.icon-theme($app-dark-theme);
+@include mat.list-theme($app-dark-theme);
+@include mat.sidenav-theme($app-dark-theme);
+@include mat.toolbar-theme($app-dark-theme);
