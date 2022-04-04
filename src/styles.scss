@@ -1,6 +1,6 @@
 /* Add application styles & imports to this file! */
 @use '@angular/material' as mat;
-@use '../node_modules/angular/material/core/theming';
+@use '@angular/material/theming';
 
 @include mat.core();
 
