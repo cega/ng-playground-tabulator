@@ -1,5 +1,7 @@
 /* Add application styles & imports to this file! */
 @use '@angular/material' as mat;
+@use '../node_modules/angular/material/core/theming';
+
 @include mat.core();
 
 // Define the palettes for your theme using the Material Design palettes

@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -13,22 +16,35 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 const routes: Route[] = [
   {
     path: 'tabulator',
-    component: ExampleTableComponent
+    component: ExampleTableComponent,
   },
   {
     path: 'reactive-form',
-    component: ReactiveFormComponent
+    component: ReactiveFormComponent,
   },
   {
     path: '**',
-    redirectTo: 'tabulator', pathMatch: 'full'
-  }
-]
+    redirectTo: 'tabulator',
+    pathMatch: 'full',
+  },
+];
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes),
-  MatFormFieldModule, MatInputModule ],
-  declarations: [ AppComponent, HelloComponent, ExampleTableComponent, ReactiveFormComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+    MatFormFieldModule,
+    MatInputModule,
+  ],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    ExampleTableComponent,
+    ReactiveFormComponent,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
